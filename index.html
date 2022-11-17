@@ -17,7 +17,7 @@
             transition: all 150ms ease-in-out;
         }
         img:hover {
-            transform: rotate(720deg) scale(1.5);
+            transform: rotate(360deg) scale(1.5);
         }
         button {
             display: block;
@@ -32,8 +32,10 @@
         button:hover {
             background-color: blueviolet;
         }
-        .paragraph {
+        p {
             font-size: 30;
+            text-align: left;
+            line-height: 1.5;
         }
         footer {
             text-align: center;
@@ -45,22 +47,51 @@
             padding: 10px;
             margin: 20px;
         }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap:5px;
+        }
+        .grid img {
+            width: 100%;
+        }
+        .dark {
+            background: black;
+            color: white;
+        }
+
+       .dark .container { 
+            background: rgba(255, 255, 255, 0.6);
+        }
+        .dark a {
+           color: rgba(255, 255, 255, 0.6); 
+        }
       
     </style>
 </head>
 <body>
-    <button>Dark Theme</button>
+    <button class="theme-button">Dark Theme</button>
     <div class="container">
-    <h1>Writing</h1>
-    <h2>My most decadent hobby</h2>
-    <img src="writing1.png"></img>
-    <img src="writing2.webp"></img>
-    <img src="jane.jpg"><img>
-    <img src="yellow jacket.jpg"><img>
-
-    <p class="paragraph">I write to live. I weave my experiances in life into my non-fiction, comedy YouTube scripts and my dark fiction novels. I have self published one novel and written many more!</p>
-    <button>Learn to write!</button>
+        <h1>Writing</h1>
+        <h2>My most decadent hobby</h2>
+     <div class="grid">
+        <img src="writing1.png"/>
+        <img src="writing2.webp"/>
+        <img src="jane.jpg"/>
+        <img src="yellow jacket.jpg"/>
+     </div>
+        <p class="paragraph">I write to live. I weave my experiances in life into my non-fiction, comedy YouTube scripts and my dark fiction novels. I have self published one novel and written many more!</p>
+        <button>Learn to write!</button>
     </div>
     <footer>Coded with love by <a href="www.sebastiancseithel.com">Sebastian C Seithel</a> (AKA Coraline Corsette)</footer>
+<script>
+function changeTheme() {
+    let body = document.querySelector("body");
+    body.classList.toggle("dark");
+}
+
+    let themeButton = document.querySelector(".theme-button");
+    themeButton.addEventListener("click", changeTheme);
+</script>
 </body>
 </html>
