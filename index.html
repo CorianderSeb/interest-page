@@ -6,13 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> My Hobby: Writing ✍🏻</title>
     <style>
-        img {
-            max-height: 100px;
+        body {
+            background-color: rgb(7, 137, 180);
+            max-width: 600px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
         }
+        img {
+            max-height: 150px;
+            border-radius: 7px;
+            transition: all 150ms ease-in-out;
+        }
+        img:hover {
+            transform: rotate(720deg) scale(1.5);
+        }
+        button {
+            display: block;
+            margin: 0 auto;
+            padding: 6px;
+            border: 1px solid black;
+            font-size: 32px;
+            border-radius: 5px;
+            transition: all 150ms;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        button:hover {
+            background-color: blueviolet;
+        }
+        .paragraph {
+            font-size: 30;
+        }
+        footer {
+            text-align: center;
+            font-size: 19px;
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 10px;
+            margin: 20px;
+        }
+      
     </style>
 </head>
 <body>
     <button>Dark Theme</button>
+    <div class="container">
     <h1>Writing</h1>
     <h2>My most decadent hobby</h2>
     <img src="writing1.png"></img>
@@ -20,8 +58,9 @@
     <img src="jane.jpg"><img>
     <img src="yellow jacket.jpg"><img>
 
-    <p>I write to live. I weave my experiances in life into my non-fiction, comedy YouTube scripts and my dark fiction novels. I have self published one novel and written many more!</p>
+    <p class="paragraph">I write to live. I weave my experiances in life into my non-fiction, comedy YouTube scripts and my dark fiction novels. I have self published one novel and written many more!</p>
     <button>Learn to write!</button>
+    </div>
     <footer>Coded with love by <a href="www.sebastiancseithel.com">Sebastian C Seithel</a> (AKA Coraline Corsette)</footer>
 </body>
 </html>
